@@ -26,6 +26,7 @@ public class GameScreen extends ScreenAdapter {
 //		y = 100;
 	}
 	
+//	test
 	@Override
 	public void render(float delta) {
 		update(delta);

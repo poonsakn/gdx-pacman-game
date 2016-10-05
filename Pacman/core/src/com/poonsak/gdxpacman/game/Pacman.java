@@ -28,6 +28,7 @@ public class Pacman {
 		{-1,0}
 	};
 	
+	
 	public void move(int dir) { 
         position.x += 10 * DIR_DIFF[dir][0];
         position.y += 10 * DIR_DIFF[dir][1];

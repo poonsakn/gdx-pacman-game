@@ -21,6 +21,7 @@ public class PacmanGame extends Game {
 		super.render();
 	}
 	
+	
 	@Override
 	public void dispose () {
 		batch.dispose();
