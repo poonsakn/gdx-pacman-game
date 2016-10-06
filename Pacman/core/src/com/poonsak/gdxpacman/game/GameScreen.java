@@ -16,7 +16,8 @@ public class GameScreen extends ScreenAdapter {
 //	private int y;
 	World world;
 	private Pacman pacman;
-	
+//	private WorldRenderer worldRenderer = new WorldRenderer(pacmanGame, world);
+	private WorldRenderer worldRenderer;
 	public GameScreen(PacmanGame pacmanGame) {
 		this.pacmanGame = pacmanGame;
 		pacmanImg = new Texture("pacman.png");
@@ -26,6 +27,7 @@ public class GameScreen extends ScreenAdapter {
 //		y = 100;
 		
 		world = new World(pacmanGame);
+		
 	}
 	
 //	test
@@ -35,11 +37,14 @@ public class GameScreen extends ScreenAdapter {
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		
-		SpriteBatch batch = pacmanGame.batch;
-		batch.begin();
-		Vector2 pos = world.getPacman().getPosition();
-		batch.draw(pacmanImg, pos.x, pos.y);
-		batch.end();
+		worldRenderer = new WorldRenderer(pacmanGame, world);
+		worldRenderer.render(delta);
+		
+//		SpriteBatch batch = pacmanGame.batch;
+//		batch.begin();
+//		Vector2 pos = world.getPacman().getPosition();
+//		batch.draw(pacmanImg, pos.x, pos.y);
+//		batch.end();
 	}
 	
 	private void update(float delta) {
