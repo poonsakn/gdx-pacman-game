@@ -9,7 +9,7 @@ public class Pacman {
     public static final int DIRECTION_DOWN = 3;
     public static final int DIRECTION_LEFT = 4;
     public static final int DIRECTION_STILL = 0;
-    public static final int SPEED = 10;
+    public static final int SPEED = 5;
 	private Vector2 position;
 	private int currentDirection;
 	private int nextDirection;
