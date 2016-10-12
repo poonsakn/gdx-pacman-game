@@ -55,6 +55,6 @@ public class GameScreen extends ScreenAdapter {
 		}
 		else
 			pacman.setNextDirection(Pacman.DIRECTION_STILL);
-		
 	}
+			
 }
