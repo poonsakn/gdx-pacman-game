@@ -52,6 +52,12 @@ public class Pacman {
 			} else {
 				currentDirection = DIRECTION_STILL;
 			}
+			
+			int newRow = getRow() + DIR_DIFF[nextDirection][1];
+			int newCol = getColumn() + DIR_DIFF[nextDirection][0];
+			if(maze.hasDotAt(newRow, newCol)) {
+				maze.removeDotAt(newRow, newCol);;
+			}
 		}
 		position.x += SPEED * DIR_DIFF[currentDirection][0];
 		position.y += SPEED * DIR_DIFF[currentDirection][1];
